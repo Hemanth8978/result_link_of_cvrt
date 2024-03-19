@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>result_page</title>
+        
+    </head>
+    <body >
+        
+            
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXPOWX2U-bfo7yiPKEWtl_94BIJQ9Jk7MBf1YepsEycg&s" height="200px" width="200px" style="position:absolute;left:2%;top:15%">
+        <div style="position:absolute;left:20%;">
+            <h1 style="color:green;font-size:400% ">SIR C.V. RAMAN </h1>
+            <h1 style="color:orangered;font-size:250%;">Institute Of Technology & Science</h1>
+            
+        
+            <h2 style="color:darkslategray">Approved by AICTE New Delhi & Affiliated to JNTUA,Ananthapuramu </h2>
+            <br><br>
+            <hr><hr>
+        </div>
+        
+        <div style="position:absolute;top:400px;left:20%;">
+            <h3 style="border:4px solid powderblue;padding:10px;color:blue;background-color:rgb(160, 237, 240);">Title B.Tech III year(R20) internal marks</h3>
+            {% for cursor in cursor %}
+            <table>
+                <tr>
+                    <td><h2>Hall Ticket Number :   </h2></td>  <td><h2 style="color:green">{{cursor.0}}</h2></td>
+                </tr>
+                <tr>
+                    <td><h2>Student Name :   </h2></td><td><h2 style="color:green">{{cursor.1}}</h2></td>
+                </tr>
+            </table><br><br>
+            <table border="o.1" style="font-size:170%">
+                <th style="background-color:rgb(40, 198, 247)">Subject Code</th> <th style="background-color:rgb(40, 198, 247)">Subject Name</th> <th style="background-color:rgb(40, 198, 247)">Internal Marks</th>  <th style="background-color:rgb(40, 198, 247)">Result Status</th>
+                <tr><td>20A05601T</td>  <td>Complier Design</td> <td>{{cursor.3}}</td>  <td>p</td></tr>
+                <tr><td>20A05602T</td>  <td>Machine Learning</td> <td>{{cursor.2}}</td>  <td>p</td></tr>
+                <tr><td>20A05603T</td>  <td>Internet Of Things</td> <td>{{cursor.4}}</td>  <td>p</td></tr>
+                <tr><td>20A05604a</td>  <td>Software Testing</td> <td>{{cursor.6}}</td>  <td>p</td></tr>
+                <tr><td>20A01605</td>  <td>Environmental Economics</td> <td>{{cursor.5}}</td>  <td>p</td></tr>
+            </table>
+            
+            
+            
+            {% endfor %}
+            <br><br>
+            <h3 style="color:orangered">NOTE:  If have any mistakes in the result please inform that.</h3>
+            
+
+        </div>
+   
+    </body>
+</html>
